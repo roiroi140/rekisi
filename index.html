@@ -28,18 +28,23 @@
     </div>
   </section>
   <script>
-    function inputButtonNengou(){
-    Nengoudata = nenngou.value;
-    switch(Nengoudata){
-        case "1919":
-          msg.innerText = "ikuiku";
-          break;
-      }
-    }
-    let msg = document.getElementById('msg');
-    let checkButton = document.getElementById('checkButton1');
-    checkButton.addEventListener('click', checkButton1);
+  let nenngou = document.getElementById('nenngou');
+  let msg = document.getElementById('msg');
+  let checkButton = document.getElementById('checkButton1');
 
-  </script>
+  function inputButtonNengou() {
+    let Nengoudata = nenngou.value;
+    switch (Nengoudata) {
+      case "1919":
+        msg.innerText = "ベルサイユ条約, パリ講和会議";
+        break;
+      default:
+        msg.innerText = "該当なし";
+    }
+  }
+
+  checkButton.addEventListener('click', inputButtonNengou);
+</script>
+
   </body>
 </html>
