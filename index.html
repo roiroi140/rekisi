@@ -16,13 +16,30 @@
         Overview -概要-
       </p>
       <p class="is-size-7-mobile is-size-5-desktop">
-        したの検索バーに年号または出来事を入れると対応する年号や出来事が出てきます。<br>
+        したの検索バーに年号または出来事を入れてボタンを押すと対応する年号や出来事が出てきます。<br>
         例:1919と入力した場合→ベルサイユ条約,パリ講和会議etc<br>
         関東大震災と入力した場合→1923年
       </p>
-      <input type="text" placeholder="ここに年号を入力" id="nenngou"><br>
+      <p class="is-size-5-mobile is-size-5-desktop">注意</p>
+      <p class="is-size-7-mobile is-size-5-desktop">年号は西暦で入力してください</p>
+      <input type="text" placeholder="ここに年号を入力" id="nenngou"><input type="button" value="Check" id="checkButton1"><br>
       <input type="text" placeholder="ここに出来事を入力" id="dekigoto">
+      <p id="msg"></p>
     </div>
   </section>
+  <script>
+    function inputButtonNengou(){
+    Nengoudata = nenngou.value;
+    switch(Nengoudata){
+        case "1919":
+          msg.innerText = "ikuiku";
+          break;
+      }
+    }
+    let msg = document.getElementById('msg');
+    let checkButton = document.getElementById('checkButton');
+    checkButton.addEventListener('click', butotnClick);
+
+  </script>
   </body>
 </html>
